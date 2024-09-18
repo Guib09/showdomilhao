@@ -23,22 +23,8 @@
         <Image Source="showdomilhão-1.jpg"
         Grid.RowSpan="0"
         Grid.ColumnSpan="2"/>
+  
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    </Grid>
-
+     </Grid>
 </ContentPage>
