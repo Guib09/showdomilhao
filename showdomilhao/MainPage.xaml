@@ -3,8 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="showdomilhao.MainPage">
 <Grid>
-     
-        <Grid.RowDefinitions>
+     <Label Text="Quiz Show do Milhao"
+           TextColor="White"
+           Margin="20"
+           BackgroundColor="Blue"
+           FontSize="18"/>
+           <Button Text="Blue"
+             Margin="20"
+             Grid.Row="1"
+             TextColor="Blue"/>
+    <Image Source="showdomilhão.jpg"
+        Grid.RowSpan="0"
+        Grid.ColumnSpan="1"/>
+           
+          <Grid.RowDefinitions>
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
@@ -19,10 +31,7 @@
           <ColumnDefinition Width="*"/>
           <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
- 
-        <Image Source="showdomilhão-1.jpg"
-        Grid.RowSpan="0"
-        Grid.ColumnSpan="2"/>
+         
   
 
 
