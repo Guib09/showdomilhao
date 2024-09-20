@@ -1,9 +1,8 @@
 ﻿namespace showdomilhao;
 
-public partial class MainPage : ContentPage
+public class Gerenciador
 {
-	Gerenciador gerenciador;
-	
+	  Gerenciador gerenciador;
 	public MainPage()
 	{
 		InitializeComponent();
@@ -35,6 +34,7 @@ public partial class MainPage : ContentPage
   {
     gerenciador!.VerificaCorreto(5);
   }
+}
   
   
 
