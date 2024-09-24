@@ -2,55 +2,70 @@ namespace showdomilhao
 {
   public class Questao
   {
-    public string questao { get; set; }
-
-    //---------------------------------------------------------------
-    public string resposta1 { get; set; }
-    public string resposta2 { get; set; }
-    public string resposta3 { get; set; }
-    public string resposta4 { get; set; }
-    public string resposta5 { get; set; }
-    public int NivelDaPergunta;
-    public int RespostaR;
-    public int RespostaC;
+    //________________________________________________________________________________________________________________
+    public string? Pergunta {get;set;}
+    public string? Resposta0{get;set;}
+    public string? Resposta1{get;set;}
+    public string? Resposta2{get;set;}
+    public string? Resposta3{get;set;}
+    public string? Resposta4{get;set;}
+    public int Nivel {get;set;} = 0;
+    public int RespostaCerta {get;set;} = 0;
+    public int RespostaE {get;set;} = 0;
+    //________________________________________________________________________________________________________________
+    
     private Label labelPergunta;
-    private Button buttonrep1;
-    private Button buttonrep2;
-    private Button buttonrep3;
-    private Button buttonrep4;
-    private Button buttonrep5;
-
-    public void desenhar()
+    private Button buttonResposta0;
+    private Button buttonResposta1;
+    private Button buttonResposta2;
+    private Button buttonResposta3;
+    private Button buttonResposta4;
+    //___________________________________________________________________________________________________________________
+    public Questao()
     {
-      labelPergunta.Text = questao;
-      buttonrep1.Text = resposta1;
-      buttonrep2.Text = resposta2;
-      buttonrep3.Text = resposta3;
-      buttonrep4.Text = resposta4;
-      buttonrep5.Text = resposta5;
+    }
+    //________________________________________________________________________________________________________________
+    public void Desenhar()
+    {
+      labelPergunta.Text = Pergunta;
+      buttonResposta0.Text = Resposta0;
+      buttonResposta1.Text = Resposta1;
+      buttonResposta2.Text = Resposta2;
+      buttonResposta3.Text = Resposta3;
+      buttonResposta4.Text = Resposta4;
+
     }
 
+    //________________________________________________
 
-
-    public  Questao ()
-    {}
-    public Questao(Label per, Button bot1, Button bot2, Button bot3, Button bot4, Button bot5)
+    public Questao(Label LP, Button bt00, Button bt01, Button bt02, Button bt03, Button bt04)
     {
-      labelPergunta = per;
-      buttonrep1 = bot1;
-      buttonrep2 = bot2;
-      buttonrep3 = bot3;
-      buttonrep4 = bot4;
-      buttonrep5 = bot5;
+
+      labelPergunta = LP;
+
+      buttonResposta0 = bt00;
+      buttonResposta1 = bt01;
+      buttonResposta2 = bt02;
+      buttonResposta3 = bt03;
+      buttonResposta4 = bt04;
     }
-
-
-    public bool verificaresposdta(int RespostaC)
+    //________________________________________________________________________________________________________________
+    public void ConfigurarDesenho(Label LP, Button bt00, Button bt01, Button bt02, Button bt03, Button bt04)
     {
-      if (RespostaC == RespostaR)
+      labelPergunta = LP;
+      buttonResposta0 = bt00;
+      buttonResposta1 = bt01;
+      buttonResposta2 = bt02;
+      buttonResposta3 = bt03;
+      buttonResposta4 = bt04;
+    }
+    //__________________________________________________________________________________________________________________
+    public bool verificaresposdta(int RespostaCerta)
+    {
+      if (RespostaCerta == RespostaE)
       {
-        var bot = QualBot(RespostaC);
-        bot.BackgroundColor = Colors.Green;
+        var bot = QualBot(RespostaCerta);
+        bot.BackgroundColor = Colors.Black;
         return true;
       }
       else
@@ -58,33 +73,25 @@ namespace showdomilhao
         return false;
       }
     }
-     
-    private Button QualBot (int RespostaC)
+    //___________________________________________________________________________________________________________________
+    private Button QualBot(int RespostaCerta)
     {
-      if (RespostaC == 1)
-        return buttonrep1;
-      else if (RespostaC == 2)
-        return buttonrep2;
-      else if (RespostaC == 3)
-        return buttonrep3;
-      else if (RespostaC == 4)
-        return buttonrep4;
-      else if (RespostaC == 5)
-        return buttonrep5;
-        else
+      if (RespostaCerta == 0)
+        return buttonResposta0;
+
+      else if (RespostaCerta == 1)
+        return buttonResposta1;
+
+      else if (RespostaCerta == 2)
+        return buttonResposta2;
+
+      else if (RespostaCerta == 3)
+        return buttonResposta3;
+
+      else if (RespostaCerta == 4)
+        return buttonResposta4;
+      else
         return null;
     }
   }
 }
-
-
-
-//ublic void configurar(Label per,Button bot1,Button bot2,Button bot3,Button bot4,Button bot5); 
-// {
-//  labelPergunta=per;
-//  buttonrep=bot1;
-//  buttonrep=bot2;
-//  buttonrep=bot3;
-//  buttonrep=bot4;
-//  buttonrep=bot5;
-// }

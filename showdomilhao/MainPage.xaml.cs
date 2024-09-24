@@ -1,39 +1,38 @@
 ﻿namespace showdomilhao;
 
-public class Gerenciador
+public partial class MainPage : ContentPage
 {
-	  Gerenciador gerenciador;
+	
+	//public Gerenciador gerenciador;
+
 	public MainPage()
+
 	{
 		InitializeComponent();
-        gerenciador = new Gerenciador(labelPergunta, btnResposta01, btnResposta02, btnResposta03, btnResposta04, btnResposta05);
-    gerenciador.ProximaQuestao();
+			//gerenciador = new Gerenciador(labelPergunta, buttonResposta01, buttonResposta02, buttonResposta03, buttonResposta04, buttonResposta05);
+		//gerenciador.ProximaQuestao();
 	}
-
-  private void OnBtnResposta01Clicked(object sender, EventArgs e)
-  {
-    gerenciador!.VerificaCorreto(1);
-  }
-
-  private void OnBtnResposta02Clicked(object sender, EventArgs e)
-  {
-    gerenciador!.VerificaCorreto(2);
-  }
-
-  private void OnBtnResposta03Clicked(object sender, EventArgs e)
-  {
-    gerenciador!.VerificaCorreto(3);
-  }
-
-  private void OnBtnResposta04Clicked(object sender, EventArgs e)
-  {
-    gerenciador!.VerificaCorreto(4);
-  }
-
-  private void OnBtnResposta05Clicked(object sender, EventArgs e)
-  {
-    gerenciador!.VerificaCorreto(5);
-  }
+//
+	//void Resposta01(object sender, EventArgs args)
+	//{
+	//	gerenciador.VerificarSeEstaCorreta(1);
+	//}
+	//void Resposta02(object sender, EventArgs args)
+	//{
+	//	gerenciador.VerificarSeEstaCorreta(2);
+	//}
+	//void Resposta03(object sender, EventArgs args)
+	//{
+	//	gerenciador.VerificarSeEstaCorreta(3);
+	//}
+	//void Resposta04(object sender, EventArgs args)
+	//{
+	//	gerenciador.VerificarSeEstaCorreta(4);
+	//}
+	//void Resposta05(object sender, EventArgs args)
+	//{
+	//	gerenciador.VerificarSeEstaCorreta(5);
+	//}
 }
   
   
