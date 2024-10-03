@@ -36,7 +36,5 @@ public partial class MainPage : ContentPage
   {
     gerenciador!.VerificaCorreto(5);
   }
-   void OmAjudaRetirarClicked(object s, EventArgs e)
-   {
-	      
-   }
+   void OnAjudaRetirarClicked(object s, EventArgs e);
+}
