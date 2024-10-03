@@ -1,8 +1,13 @@
 
 namespace Interfaces;
 
-public interface IAjuda
+public interface IAjudas
 {
+  void RealizarAjuda();
+}
+
+  public interface IAjuda
+ {
   public abstract class IAjuda
   {
     protected Button btnResp01;

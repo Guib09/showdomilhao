@@ -1,4 +1,4 @@
-namespace showdomilhao
+namespace showdomilho
 {
   public class Questao
   {
@@ -65,6 +65,7 @@ namespace showdomilhao
       if (RespostaCerta == RespostaE)
       {
         var bot = QualBot(RespostaCerta);
+
         bot.BackgroundColor = Colors.Black;
         return true;
       }
@@ -93,5 +94,10 @@ namespace showdomilhao
       else
         return null;
     }
-  }
+
+        internal bool VerificarSeEstaCorreta(int respostaCerta)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
