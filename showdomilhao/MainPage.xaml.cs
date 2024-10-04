@@ -4,8 +4,8 @@ namespace showdomilhao;
 
 public partial class MainPage : ContentPage
 {
-  Gerenciador gerenciador;
-	public MainPage()
+   Gerenciador gerenciador;
+	 public MainPage()
 	{
 		InitializeComponent();
     gerenciador = new Gerenciador(labelPergunta, btnResposta01, btnResposta02, btnResposta03, btnResposta04, btnResposta05);

@@ -2,6 +2,8 @@ namespace showdomilho
 {
   public class Questao
   {
+    public class Questao
+  {
     //________________________________________________________________________________________________________________
     public string? Pergunta {get;set;}
     public string? Resposta0{get;set;}
@@ -10,8 +12,8 @@ namespace showdomilho
     public string? Resposta3{get;set;}
     public string? Resposta4{get;set;}
     public int Nivel {get;set;} = 0;
-    public int RespostaCerta {get;set;} = 0;
-    public int RespostaE {get;set;} = 0;
+    public int RespostaCerta;
+    public int RespostaE;
     //________________________________________________________________________________________________________________
     
     private Label labelPergunta;
@@ -33,6 +35,17 @@ namespace showdomilho
       buttonResposta2.Text = Resposta2;
       buttonResposta3.Text = Resposta3;
       buttonResposta4.Text = Resposta4;
+    //____________________________________________________________________________________________________________________
+      buttonResposta0!.BackgroundColor = Colors.DarkBlue;
+      buttonResposta0!.TextColor       = Colors.White;
+      buttonResposta1!.BackgroundColor = Colors.DarkBlue;
+      buttonResposta1!.TextColor       = Colors.White;
+      buttonResposta2!.BackgroundColor = Colors.DarkBlue;
+      buttonResposta2!.TextColor       = Colors.White;
+      buttonResposta3!.BackgroundColor = Colors.DarkBlue;
+      buttonResposta3!.TextColor       = Colors.White;
+      buttonResposta4!.BackgroundColor = Colors.DarkBlue;
+      buttonResposta4!.TextColor       = Colors.White;
 
     }
 
@@ -60,7 +73,7 @@ namespace showdomilho
       buttonResposta4 = bt04;
     }
     //__________________________________________________________________________________________________________________
-    public bool verificaresposdta(int RespostaCerta)
+    public bool VerificarSeEstaCorreta(int RespostaCerta)
     {
       if (RespostaCerta == RespostaE)
       {
@@ -71,6 +84,10 @@ namespace showdomilho
       }
       else
       {
+        var Certo = QualBot (RespostaCerta);
+        var Errado = QualBot (RespostaE);
+        Certo.BackgroundColor = Color.FromArgb("#fad72a");
+        Errado.BackgroundColor = Color.FromArgb("#d11702");
         return false;
       }
     }
@@ -95,9 +112,5 @@ namespace showdomilho
         return null;
     }
 
-        internal bool VerificarSeEstaCorreta(int respostaCerta)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

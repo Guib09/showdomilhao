@@ -95,35 +95,5 @@
                 VerticalOptions="FillAndExpand"
                 Grid.Row="6"
                 Grid.ColumnSpan="3"/>
-
-        <Button x:Name="dica1"
-                Text="Dica 1"
-                BackgroundColor="#55dde3ed"
-                TextColor="Black"
-                Margin="40,15,40,15"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-                Grid.Row="7"
-                Grid.Column="0"/>
-
-        <Button x:Name="dica2"
-                Text="Dica 2"
-                BackgroundColor="#55dde3ed"
-                TextColor="Black"
-                Margin="40,15,40,15"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-                Grid.Row="7"
-                Grid.Column="1"/>
-
-        <Button x:Name="dica3"
-                Text="Dica 3"
-                BackgroundColor="#55dde3ed"
-                TextColor="Black"
-                Margin="40,15,40,15"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="FillAndExpand"
-                Grid.Row="7"
-                Grid.Column="2"/>
-    </Grid>
+  </Grid>
 </ContentPage>
