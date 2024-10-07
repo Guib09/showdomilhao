@@ -1,10 +1,9 @@
-﻿using Modelos;
-
+﻿
 namespace showdomilhao;
 
 public partial class MainPage : ContentPage
 {
-   Gerenciador gerenciador;
+   G gerenciador;
 	 public MainPage()
 	{
 		InitializeComponent();
@@ -37,4 +36,9 @@ public partial class MainPage : ContentPage
     gerenciador!.VerificaCorreto(5);
   }
    void OnAjudaRetirarClicked(object s, EventArgs e);
-}
+   void On PularClicked (object s; EventArgs a)
+   { 
+    gerenciador.ProximaQuestao()
+    (s as Button).IsVisible= false;
+  
+  
