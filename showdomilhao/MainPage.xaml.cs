@@ -1,10 +1,10 @@
 ﻿
 namespace showdomilhao;
 
-public partial class MainPage : ContentPage
+public partial class gerenciador
 {
-   G gerenciador;
-	 public MainPage()
+    public abstract gerenciador();
+	 public void MainPage()
 	{
 		InitializeComponent();
     gerenciador = new Gerenciador(labelPergunta, btnResposta01, btnResposta02, btnResposta03, btnResposta04, btnResposta05);
@@ -35,7 +35,6 @@ public partial class MainPage : ContentPage
   {
     gerenciador!.VerificaCorreto(5);
   }
-   void OnAjudaRetirarClicked(object, EventArgs);
    void OnPularClicked (object sender)
    { 
     gerenciador.ProximaQuestao(OnPularClicked, 1)
