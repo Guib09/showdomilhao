@@ -35,10 +35,22 @@ public partial class MainPage : ContentPage
   {
     gerenciador!.VerificaCorreto(5);
   }
-   void OnAjudaRetirarClicked(object s, EventArgs e);
-   void On PularClicked (object s; EventArgs a)
+   void OnAjudaRetirarClicked(object, EventArgs);
+   void OnPularClicked (object sender)
    { 
-    gerenciador.ProximaQuestao()
-    (s as Button).IsVisible= false;
-  
+    gerenciador.ProximaQuestao(OnPularClicked, 1)
+    (s as Button).IsVisible =false;
+     int pula=0;
+     void OnPulaClicked(Object s, EventArgs a)
+     {
+       if(pula ==2)
+             (s as Button).IsVisible=false;
+             else
+             { 
+               gerenciador.ProximaQuestao();
+               pula++;
+             }
+    }
+   }
+}
   
